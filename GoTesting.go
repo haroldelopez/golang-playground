@@ -8,6 +8,36 @@ import (
 )
 
 func main() {
+	go say("Hola", 2*time.Second)
+	go say("Cómo estás?", 1*time.Second)
+
+	//Con esto le digo al
+	time.Sleep(4 * time.Second)
+}
+
+func say(texto string, segs time.Duration) {
+	fmt.Println("He ingresado a say")
+	time.Sleep(segs)
+	fmt.Println("He finalizado say " + texto)
+}
+func TiempoTranscurrido() {
+	//	ahora := time.N
+	//	futuro := time.Now
+	bandera := false
+
+	for bandera == false {
+		fmt.Println("Tiempo transcurrido es ")
+		/*	if time.Since(ahora) == time.Until(futuro) {
+			bandera = true
+		}*/
+	}
+
+	//fmt.Println("Voy a parar por " + (t.Sleep(30 * time.Second).).)
+	time.Sleep(30 * time.Second)
+	fmt.Println("Adiós")
+}
+
+func SolicitarInformacion() {
 	var nombre string
 	/*var edad int
 	fmt.Printf("Introduzca su nombre\n")
@@ -26,18 +56,4 @@ func main() {
 	} else {
 		fmt.Println("Hola " + nombre)
 	}
-
-	//	ahora := time.Now
-	//	futuro := time.Now
-	bandera := false
-	for bandera == false {
-		fmt.Println("Tiempo transcurrido es ")
-		/*	if time.Since(ahora) == time.Until(futuro) {
-			bandera = true
-		}*/
-	}
-
-	//fmt.Println("Voy a parar por " + (t.Sleep(30 * time.Second).).)
-	time.Sleep(30 * time.Second)
-	fmt.Println("Adiós")
 }
