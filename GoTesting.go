@@ -7,11 +7,21 @@ import (
 	"time"
 )
 
-func main() {
-	go say("Hola", 2*time.Second)
-	go say("Cómo estás?", 1*time.Second)
+var y int16
+var x int = 45
 
-	//Con esto le digo al
+func main() {
+
+	n, nerr := fmt.Println("1", 2)
+	fmt.Println(n)
+	fmt.Println(nerr)
+
+	/*go say("Hola", 2*time.Second)
+	go say("Cómo estás?", 1*time.Second)*/
+
+	fmt.Printf("%T\n", y)
+
+	//Con esto le digo al programa que espere que terminen de ejecutar las go routines para finalizar. S
 	time.Sleep(4 * time.Second)
 }
 
